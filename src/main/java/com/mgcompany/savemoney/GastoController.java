@@ -20,7 +20,7 @@ public class GastoController {
 	
 	@GetMapping("teste")
 	public ResponseEntity<Gasto> teste() {
-		return new ResponseEntity<>(gastoRepository.save(new Gasto("sabonete4",new BigDecimal(15),new Date())), HttpStatus.OK);
+		return new ResponseEntity<>(gastoRepository.save(new Gasto("sabonete5",new BigDecimal(15),new Date())), HttpStatus.OK);
 	}
 	
 	
