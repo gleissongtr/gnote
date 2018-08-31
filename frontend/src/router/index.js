@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Ex01 from '@/components/Ex01'
 
 Vue.use(Router)
-// https://www.youtube.com/watch?reload=9&v=4lk9-PYensI
+
 export default new Router({
   mode: 'history',
   routes: [
