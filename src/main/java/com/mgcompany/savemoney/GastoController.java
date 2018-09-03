@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("gasto")
+@RequestMapping("/gasto")
 public class GastoController {
 
 	@Autowired
 	private GastoRepository gastoRepository;
 	
-	@GetMapping("teste")
+	@GetMapping
 	public ResponseEntity<Gasto> teste() {
 		return new ResponseEntity<>(gastoRepository.save(new Gasto("1213",new BigDecimal(15),new Date())), HttpStatus.OK);
 	}

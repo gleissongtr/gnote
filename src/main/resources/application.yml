@@ -1,12 +1,18 @@
+server:
+  port: 8090
+  
 spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
   jpa:
     database: MYSQL
     show-sql: true
     hibernate:
       ddl-auto: create-drop
   datasource:
-    platform: mysql
-    url: jdbc:mysql://localhost:3306/savemoney
-    username: root
-    password: root
-    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:h2:file:/home/gleissongtr/DESENV/DBGnote
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
