@@ -22,7 +22,7 @@ export default {
     }
   },
   methods: {
-    buscar () { 
+    buscar () {
       alert(axios)
     }
   }
