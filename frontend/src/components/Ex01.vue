@@ -5,7 +5,7 @@
     <div>DESCRIÇÃO: {{gasto.descricao}}</div>
     <div>VALOR: {{gasto.valor}}</div>
     <div>DATA: {{gasto.data}}</div>
-
+    <button @click="buscar()">asdf</button>
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -17,13 +17,22 @@ export default {
   name: 'ex01',
   data () {
     return {
+      errors: [],
       gasto: {},
       msg: 'exemplo 01'
     }
   },
   methods: {
     buscar () {
-      alert(axios)
+      axios.get(`http://localhost:8090/gasto/`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.gasto = response.data
+          console.log(response.data)
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
     }
   }
 }
