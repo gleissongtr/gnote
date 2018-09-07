@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Ex01 from '@/components/Ex01'
 import Input from '@/components/Input'
+import Botoes from '@/components/Botoes'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/input',
       name: 'input',
       component: Input
+    },
+    {
+      path: '/botoes',
+      name: 'botoes',
+      component: Botoes
     }
   ]
 })
